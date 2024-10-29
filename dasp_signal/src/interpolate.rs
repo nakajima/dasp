@@ -12,7 +12,7 @@ use dasp_interpolate::Interpolator;
 /// - {Up/Down}sampler.
 /// - Sample interpolater.
 /// - Sample decimator.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Converter<S, I>
 where
     S: Signal,
@@ -48,6 +48,7 @@ where
             scale > 0.0,
             "We can't yield any frames at 0 times a second!"
         );
+
         Converter {
             source: source,
             interpolator: interpolator,
