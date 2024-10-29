@@ -911,7 +911,7 @@ pub struct Rate {
 }
 
 /// A constant phase step size.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct ConstHz {
     step: f64,
 }

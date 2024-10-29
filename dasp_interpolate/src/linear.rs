@@ -15,6 +15,7 @@ use dasp_sample::{Duplex, Sample};
 ///
 /// - When using `dasp_interpolate`, this item requires the **linear** feature to be enabled.
 /// - When using `dasp`, this item requires the **interpolate-linear** feature to be enabled.
+#[derive(Clone, Debug)]
 pub struct Linear<F> {
     left: F,
     right: F,
